@@ -1,20 +1,12 @@
-# DS2 Class 2021
+# Projects guideline
 
-## Practice notebooks
-
-The class content has moved here:
-
-https://github.com/obidam/ds2-2020/tree/ds2-2021
-
-## Projects
-
-### Github Procedure
+## Github Procedure
 - Fork this github repository to your own account
 - Add a folder under ds2-2021/projects, name it with your last name
 - Work out your project codes/documentation and stage/push it to your folder
 - Once finalized, create a pull request to the main branch
 
-### Projects #5: Ocean warming
+## Projects #5: Ocean warming
  
 *Description*: Because of the human driven intensification of the greenhouse effect, the ocean is warming. 
 You can compute ocean heat content (OHC) and its trend with a regression (linear or not) for the entire ocean time series and extrapolate to the future, e.g. what is the expected ocean warming for the horizon 2100.
@@ -37,7 +29,7 @@ or:
     ds = xr.open_zarr(gcsmap)
        
 
-### Projects #6: Ocean warming contribution to Sea level rise
+## Projects #6: Ocean warming contribution to Sea level rise
  
 *Description*: Sea level increases because of changes in currents (dynamic effect) and because of ocean density changes (steric effect). Compute ocean density changes contribution to Sea level rises (thermosteric effect) and demonstrate that it is the driver of regional sea level change trends.
  
@@ -63,7 +55,7 @@ or:
     ds = pangeo_cat.ocean.sea_surface_height.read_chunked()
 
 
-### Projects #7: Future Arctic sea ice change (Arctic)
+## Projects #7: Future Arctic sea ice change (Arctic)
 
 *Description*: The Coupled Model Intercomparison Project is a framework within which a number of research centres produce predictions of the future evolution of the climate. Many climate centres use an ensemble approach, in which they produce several simulations for each scenario, using the same model configuration. By comparing these multiple simulations (“the ensemble"), we can estimate the probability that the climate will evolve in a certain way.
 

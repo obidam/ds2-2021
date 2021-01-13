@@ -129,3 +129,6 @@ dmypy.json
 .pyre/
 .idea/
 dask-worker-space
+.idea/ds2-2021.iml
+.idea/modules.xml
+.idea/workspace.xml
