@@ -56,6 +56,13 @@ or:
     gcsmap = fs.get_mapper("ds2data/EN.4.2.1.f.analysis.g10.zarr")
     ds = xr.open_zarr(gcsmap)
 
+**Sea Level data** accessible here:
+
+    from intake import open_catalog
+    pangeo_cat = open_catalog("https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/master.yaml")
+    ds = pangeo_cat.ocean.sea_surface_height.read_chunked()
+
+
 ## Projects #7: Future Arctic sea ice change (Arctic)
 
 *Description*: The Coupled Model Intercomparison Project is a framework within which a number of research centres produce predictions of the future evolution of the climate. Many climate centres use an ensemble approach, in which they produce several simulations for each scenario, using the same model configuration. By comparing these multiple simulations (“the ensemble"), we can estimate the probability that the climate will evolve in a certain way.
