@@ -13,12 +13,14 @@ You can compute ocean heat content (OHC) and its trend with a regression (linear
 
 Instead of working globally, you can study the ocean warming locally. In that case, you can plot the local slopes of the different OHC time series and deduce where the ocean warming is moderate and where it is strong.
 
-*Data*: You will use the [EN4 dataset](https://www.metoffice.gov.uk/hadobs/en4/) that is an interpolation of all available ocean observations (of temperature and salinity) onto a regular space/time grid.
+*Data*:
+
+By default, you can use the [EN4 dataset](https://www.metoffice.gov.uk/hadobs/en4/) that is an interpolation of all available ocean observations (of temperature and salinity) onto a regular space/time grid.
 
 This dataset can be accessed this way:
     
     from intake import open_catalog
-    catalog_url = 'https://raw.githubusercontent.com/obidam/ds2-2021/ds2_data_catalog.yml'
+    catalog_url = 'https://raw.githubusercontent.com/obidam/ds2-2021/main/ds2_data_catalog.yml'
     cat = open_catalog(catalog_url)
     ds = cat.en4.read_chunked()
     
@@ -28,17 +30,21 @@ or:
     gcsmap = fs.get_mapper("ds2data/EN.4.2.1.f.analysis.g10.zarr")
     ds = xr.open_zarr(gcsmap)
        
+But, if you wish, you can try to use [climate model simulations data](https://www.wcrp-climate.org/wgcm-cmip/wgcm-cmip6) that accessible here: [CMIP6 data](https://cloud.google.com/blog/products/data-analytics/new-climate-model-data-now-google-public-datasets).
+
+
+       
 
 ## Projects #6: Ocean warming contribution to Sea level rise
  
 *Description*: Sea level increases because of changes in currents (dynamic effect) and because of ocean density changes (steric effect). Compute ocean density changes contribution to Sea level rises (thermosteric effect) and demonstrate that it is the driver of regional sea level change trends.
  
-*Data*: You will use the [EN4 dataset](https://www.metoffice.gov.uk/hadobs/en4/) that is an interpolation of all available ocean observations (of temperature and salinity) onto a regular space/time grid.
+*Data*: You can use the [EN4 dataset](https://www.metoffice.gov.uk/hadobs/en4/) that is an interpolation of all available ocean observations (of temperature and salinity) onto a regular space/time grid.
 
 This dataset can be accessed this way:
     
     from intake import open_catalog
-    catalog_url = 'https://raw.githubusercontent.com/obidam/ds2-2021/ds2_data_catalog.yml'
+    catalog_url = 'https://raw.githubusercontent.com/obidam/ds2-2021/main/ds2_data_catalog.yml'
     cat = open_catalog(catalog_url)
     ds = cat.en4.read_chunked()
     

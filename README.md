@@ -26,7 +26,7 @@ Instead of working globally, you can study the ocean warming locally. In that ca
 This dataset can be accessed this way:
     
     from intake import open_catalog
-    catalog_url = 'https://raw.githubusercontent.com/obidam/ds2-2021/ds2_data_catalog.yml'
+    catalog_url = 'https://raw.githubusercontent.com/obidam/ds2-2021/main/ds2_data_catalog.yml'
     cat = open_catalog(catalog_url)
     ds = cat.en4.read_chunked()
     
@@ -46,7 +46,7 @@ or:
 This dataset can be accessed this way:
     
     from intake import open_catalog
-    catalog_url = 'https://raw.githubusercontent.com/obidam/ds2-2021/ds2_data_catalog.yml'
+    catalog_url = 'https://raw.githubusercontent.com/obidam/ds2-2021/main/ds2_data_catalog.yml'
     cat = open_catalog(catalog_url)
     ds = cat.en4.read_chunked()
     
