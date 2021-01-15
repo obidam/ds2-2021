@@ -24,7 +24,7 @@ This dataset can be accessed this way:
     from intake import open_catalog
     catalog_url = 'https://raw.githubusercontent.com/obidam/ds2-2021/main/ds2_data_catalog.yml'
     cat = open_catalog(catalog_url)
-    ds = cat.en4.read_chunked()
+    ds = cat["en4"].to_dask()
     
 or:
 
@@ -46,19 +46,11 @@ This dataset can be accessed this way:
     from intake import open_catalog
     catalog_url = 'https://raw.githubusercontent.com/obidam/ds2-2021/main/ds2_data_catalog.yml'
     cat = open_catalog(catalog_url)
-    ds = cat.en4.read_chunked()
-    
-or:
+    ds = cat["en4"].to_dask()
 
-    fs = gcsfs.GCSFileSystem(project="ds2class-2021")
-    gcsmap = fs.get_mapper("ds2data/EN.4.2.1.f.analysis.g10.zarr")
-    ds = xr.open_zarr(gcsmap)
+**Sea Level data** accessible on the catalog as well here:
 
-**Sea Level data** accessible here:
-
-    from intake import open_catalog
-    pangeo_cat = open_catalog("https://raw.githubusercontent.com/pangeo-data/pangeo-datastore/master/intake-catalogs/master.yaml")
-    ds = pangeo_cat.ocean.sea_surface_height.read_chunked()
+    ds = cat["sea_surface_height"].to_dask()
 
 
 ## Projects #7: Future Arctic sea ice change (Arctic)
