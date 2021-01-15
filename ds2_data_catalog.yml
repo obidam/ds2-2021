@@ -47,7 +47,7 @@ sources:
           project: 'alert-ground-261008'
           token: anon
           access: read_only
-    aviso:
+    sea_surface_height:
       description: Sea-surface altimetry data from The Copernicus Marine Environment (monthly(
       driver: zarr
       args:
@@ -56,16 +56,3 @@ sources:
           project: 'ds2class-2021'
           token: anon
           access: read_only
-    sea_surface_height:
-      description: sea-surface altimetry data from The Copernicus Marine Environment
-      metadata:
-        url: 'http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=SEALEVEL_GLO_PHY_L4_REP_OBSERVATIONS_008_047'
-        tags:
-          - ocean
-          - satellite
-      driver: zarr
-      args:
-        urlpath: gs://pangeo-cmems-duacs
-        consolidated: True
-        storage_options:
-          requester_pays: True
