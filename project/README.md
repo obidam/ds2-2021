@@ -15,7 +15,7 @@ Instead of working globally, you can study the ocean warming locally. In that ca
 
 *Data*:
 
-[![Colab](https://img.shields.io/static/v1?label=Google&message=Open+data+with+Colab&color=blue&style=plastic&logo=google-colab)](https://colab.research.google.com/github/obidam/ds2-2021/project/Eg_of_access_to_data_in_the_cloud.ipynb)
+[![Colab](https://img.shields.io/static/v1?label=Google&message=Open+data+with+Colab&color=blue&style=plastic&logo=google-colab)](https://colab.research.google.com/github/obidam/ds2-2021/blob/master/project/Eg_of_access_to_data_in_the_cloud.ipynb)
 
 By default, you can use the [EN4 dataset](https://www.metoffice.gov.uk/hadobs/en4/) that is an interpolation of all available ocean observations (of temperature and salinity) onto a regular space/time grid.
 
