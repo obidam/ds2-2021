@@ -47,6 +47,15 @@ sources:
           project: 'alert-ground-261008'
           token: anon
           access: read_only
+    aviso:
+      description: Sea-surface altimetry data from The Copernicus Marine Environment (monthly(
+      driver: zarr
+      args:
+        urlpath: 'gcs://ds2data/dt_global_allsat_phy_l4_mm.zarr'
+        storage_options:
+          project: 'ds2class-2021'
+          token: anon
+          access: read_only
     sea_surface_height:
       description: sea-surface altimetry data from The Copernicus Marine Environment
       metadata:
